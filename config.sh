@@ -1,6 +1,6 @@
 pyinstaller main.py --onefile
 cd dist
-
+mv ./main .././jvclass
 
 # Remove End of file
 cd ..
