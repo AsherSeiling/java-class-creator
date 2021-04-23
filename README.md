@@ -6,11 +6,11 @@ Pyinstaller
 OS
 python3
 ```
-# Compelation instructions
+# Compilation instructions
 ```
 git clone https://github.com/AsherSeiling/java-class-creator
 cd java-class-creator
 chmod +x config.sh
 ./config.sh
 ```
-After the compelation move the executable file to your bin directory
+After the compilation move the executable file to your bin directory
