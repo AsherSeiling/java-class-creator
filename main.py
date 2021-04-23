@@ -9,14 +9,20 @@ programName = "jvclass"
 commands_doc = [f"Here is the documentation for {programName}", f" {programName} new-main-class <class name>", "   Creates a new class file with \"Public static void main(String[] args){}\"", f" {programName} new-class <class name>"]
 
 # Initilization for reading of the command to see if the user needs help or if there are too many args
-enable_run = True
-if len(sys.argv) > 3:
+try:
+	enable_run = True
+	if len(sys.argv) > 3:
+		enable_run = False
+		print("Command has only two additional argument\nAdditional args " + str(len(sys.argv) - 1))
+	if sys.argv[1].lower() == "-h":
+		enable_run = False
+		for i in commands_doc:
+			print(i)
+	if len(sys.argv) == 1:
+		enable_run = False
+except:
 	enable_run = False
-	print("Command has only two additional argument\nAdditional args " + str(len(sys.argv) - 1))
-if sys.argv[1].lower() == "-h":
-	enable_run = False
-	for i in commands_doc:
-		print(i)
+	print(f"Error: type \"{programName} -h\" for help with the program")
 
 # Main Function
 def main():
