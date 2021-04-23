@@ -1,4 +1,4 @@
-# java_class_creator
+# Java Class Creator
 A command line program that allows the automated creation of new java files from the bash command line.
 Works on any Linux/Mac machine with the bash command prompt
 ```
