@@ -4,6 +4,7 @@ import sys
 import commands.newClass as ncs
 import commands.newMainClass as nmcs
 import commands.compRun as comprn
+import commands.createJavaProject as cjpj
 
 
 programName = "jvclass"
@@ -13,9 +14,6 @@ commands_doc = [f"Here is the documentation for {programName}", f" {programName}
 # Initilization for reading of the command to see if the user needs help or if there are too many args
 try:
 	enable_run = True
-	if len(sys.argv) > 3:
-		enable_run = False
-		print("Command has only two additional argument\nAdditional args " + str(len(sys.argv) - 1))
 	if sys.argv[1].lower() == "-h":
 		enable_run = False
 		for i in commands_doc:
@@ -35,6 +33,8 @@ def main():
 		ncs.new_class(command)
 	elif command[1].lower() == "comp-run":
 		comprn.compRun(command[2])
+	elif command[1].lower() == "new-project":
+		cjpj.createJavaProject(command[1], command[2], command[3])
 	else:
 		print(f" Error: Command Argument \"{command[1]}\" not found try \"-h\" for help with commands")
 
