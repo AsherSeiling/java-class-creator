@@ -1,6 +1,5 @@
 # Java Class Creator
-A command line program that allows the automated creation of new java files from the bash command line.
-Works on any Linux/Mac machine with the bash command prompt
+A command line program for MacOS (Some principals may be able to be transferred to Lunix) that automates many complex actions in java.
 ```
 Pyinstaller
 OS
@@ -14,3 +13,17 @@ chmod +x config.sh
 ./config.sh
 ```
 After the compilation move the executable file to your bin directory
+# Commands
+The sheet of commands that you can use in jvclass
+## Class Creation
+Commands for class creation
+### Create new main class
+Create a class with "public static void main(String[] args){}"
+```
+jvclass new-main-class <class name>
+```
+### Create new class
+Creates a basic java class with the basic class sytax already inserted
+```
+jvclass new-class <class name>
+```
