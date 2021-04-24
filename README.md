@@ -1,4 +1,4 @@
-# Java Class Creator
+# JVclass
 A command line program for MacOS (Some principals may be able to be transferred to Lunix) that automates many complex actions in java.
 ```
 Pyinstaller
