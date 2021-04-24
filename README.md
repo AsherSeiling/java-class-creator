@@ -5,14 +5,13 @@ Pyinstaller
 OS
 python3
 ```
-# Compilation instructions
+# Installation instructions
 ```
 git clone https://github.com/AsherSeiling/java-class-creator
 cd java-class-creator
 chmod +x config.sh
 ./config.sh
 ```
-After the compilation move the executable file to your bin directory
 # Commands
 The sheet of commands that you can use in jvclass
 ## Class Creation
