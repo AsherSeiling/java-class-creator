@@ -1,7 +1,9 @@
 import os
 import sys
-import newClass as ncs
-import newMainClass as nmcs
+# Import modules for the command functions
+import commands.newClass as ncs
+import commands.newMainClass as nmcs
+
 
 
 programName = "jvclass"
