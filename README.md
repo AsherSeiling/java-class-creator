@@ -16,7 +16,6 @@ After the compilation move the executable file to your bin directory
 # Commands
 The sheet of commands that you can use in jvclass
 ## Class Creation
-Commands for class creation
 ### Create new main class
 Create a class with "public static void main(String[] args){}"
 ```
@@ -26,4 +25,9 @@ jvclass new-main-class <class name>
 Creates a basic java class with the basic class sytax already inserted
 ```
 jvclass new-class <class name>
+```
+## Building and Compilation
+### Compile and run a singlular java file
+```
+jvclass comp-run <filename>
 ```

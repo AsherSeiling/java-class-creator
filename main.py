@@ -3,12 +3,12 @@ import sys
 # Import modules for the command functions
 import commands.newClass as ncs
 import commands.newMainClass as nmcs
-
+import commands.compRun as comprn
 
 
 programName = "jvclass"
 # Commands list
-commands_doc = [f"Here is the documentation for {programName}", f" {programName} new-main-class <class name>", "   Creates a new class file with \"Public static void main(String[] args){}\"", f" {programName} new-class <class name>"]
+commands_doc = [f"Here is the documentation for {programName}", f" {programName} new-main-class <class name>", f" {programName} new-class <class name>", f" {programName} comp-run <filename>"]
 
 # Initilization for reading of the command to see if the user needs help or if there are too many args
 try:
@@ -33,6 +33,8 @@ def main():
 		nmcs.new_main_class(command)
 	elif command[1].lower() == "new-class":
 		ncs.new_class(command)
+	elif command[1].lower() == "comp-run":
+		comprn.compRun(command[2])
 	else:
 		print(f" Error: Command Argument \"{command[1]}\" not found try \"-h\" for help with commands")
 
