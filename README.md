@@ -7,7 +7,7 @@ python3
 ```
 # Installation instructions
 ```
-git clone https://github.com/AsherSeiling/java-class-creator
+git clone https://github.com/AsherSeiling/jvclass
 cd java-class-creator
 chmod +x config.sh
 ./config.sh
