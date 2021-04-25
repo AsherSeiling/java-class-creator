@@ -34,3 +34,8 @@ jvclass new-project <project name> <package name> <main file name>
 ```
 jvclass comp-run <filename>
 ```
+### Build entire project
+Must be in the projects directory
+```
+jvclass pj-build
+```
