@@ -39,3 +39,7 @@ Must be in the projects directory
 ```
 jvclass pj-build
 ```
+## Running
+```
+jvclass pj-run
+```

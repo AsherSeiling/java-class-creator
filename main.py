@@ -6,6 +6,7 @@ import commands.newMainClass as nmcs
 import commands.compRun as comprn
 import commands.createJavaProject as cjpj
 import commands.buildProject as bjp
+import commands.runProject as rpj
 
 
 programName = "jvclass"
@@ -16,7 +17,8 @@ commands_doc = [
 	f" {programName} new-class <class name>",
 	f" {programName} comp-run <filename>",
 	f" {programName} new-project <project name> <package name> <main file name>",
-	f" {programName} pj-build"
+	f" {programName} pj-build",
+	f" {programName} pj-run"
 ]
 
 # Initilization for reading of the command to see if the user needs help or if there are too many args
@@ -45,6 +47,8 @@ def main():
 		cjpj.createJavaProject(command[2], command[3], command[4])
 	elif command[1].lower() == "pj-build":
 		bjp.buildProject()
+	elif command[1].lower() == "pj-run":
+		rpj.runProject()
 	else:
 		print(f" Error: Command Argument \"{command[1]}\" not found try \"-h\" for help with commands")
 
