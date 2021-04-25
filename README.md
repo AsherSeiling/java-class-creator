@@ -25,6 +25,10 @@ Creates a basic java class with the basic class sytax already inserted
 ```
 jvclass new-class <class name>
 ```
+## Make new project
+```
+jvclass new-project <project name> <package name> <main file name>
+```
 ## Building and Compilation
 ### Compile and run a singlular java file
 ```
