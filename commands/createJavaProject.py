@@ -30,5 +30,3 @@ def createJavaProject(project_name, package_name, main_file_name):
 	initilizeJAVA(f"{filename}.java", package_name)
 	os.chdir("../..")
 	editJSON(f"{filename}.java")
-
-createJavaProject("testproject", "testproject", "mainclass.java")
