@@ -9,7 +9,7 @@ import commands.createJavaProject as cjpj
 
 programName = "jvclass"
 # Commands list
-commands_doc = [f"Here is the documentation for {programName}", f" {programName} new-main-class <class name>", f" {programName} new-class <class name>", f" {programName} comp-run <filename>"]
+commands_doc = [f"Here is the documentation for {programName}", f" {programName} new-main-class <class name>", f" {programName} new-class <class name>", f" {programName} comp-run <filename>", f" {programName} new-project <project name> <package name> <main file name>"]
 
 # Initilization for reading of the command to see if the user needs help or if there are too many args
 try:
@@ -34,7 +34,7 @@ def main():
 	elif command[1].lower() == "comp-run":
 		comprn.compRun(command[2])
 	elif command[1].lower() == "new-project":
-		cjpj.createJavaProject(command[1], command[2], command[3])
+		cjpj.createJavaProject(command[2], command[3], command[4])
 	else:
 		print(f" Error: Command Argument \"{command[1]}\" not found try \"-h\" for help with commands")
 
