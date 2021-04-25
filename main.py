@@ -5,11 +5,18 @@ import commands.newClass as ncs
 import commands.newMainClass as nmcs
 import commands.compRun as comprn
 import commands.createJavaProject as cjpj
+import commands.buildProject as bjp
 
 
 programName = "jvclass"
 # Commands list
-commands_doc = [f"Here is the documentation for {programName}", f" {programName} new-main-class <class name>", f" {programName} new-class <class name>", f" {programName} comp-run <filename>", f" {programName} new-project <project name> <package name> <main file name>"]
+commands_doc = [
+	f"Here is the documentation for {programName}",
+	f" {programName} new-main-class <class name>",
+	f" {programName} new-class <class name>",
+	f" {programName} comp-run <filename>",
+	f" {programName} new-project <project name> <package name> <main file name>"
+]
 
 # Initilization for reading of the command to see if the user needs help or if there are too many args
 try:
