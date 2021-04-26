@@ -9,5 +9,5 @@ def runProject():
 	mainfilename = jsonfile["mainfile"]
 	mainfilename = mainfilename.split(".")[0]
 	os.chdir("src")
-	os.chdir(f"{os.listdir()[0]}")
+	os.chdir(jsonfile["modulename"])
 	os.system(f"java {mainfilename}.java")

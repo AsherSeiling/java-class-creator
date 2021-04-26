@@ -4,14 +4,14 @@ import os
 # Initilizes the java file
 def initilizeJAVA(filename, packageName):
 	javafile = open(filename, "w+")
-	java_code = [f"package {packageName}.src.{packageName};", f"public class {filename.split('.')[0]}" + "{", "	public static void main(String[] args){","	}" ,"}"]
+	java_code = [f"public class {filename.split('.')[0]}" + "{", "	public static void main(String[] args){","	}" ,"}"]
 	for i in java_code:
 		javafile.write(f"{i}\n")
 
 # Edit the JSON file
-def editJSON(mainfilename):
+def editJSON(mainfilename, packageName):
 	jsonfile = open("config.json", "w+")
-	jsoncode = ["{", f"	\"mainfile\" : \"{mainfilename}\"",  "}"]
+	jsoncode = ["{", f"	\"mainfile\" : \"{mainfilename}\",", f"	\"modulename\" : \"{packageName}\"", "}"]
 	for i in jsoncode:
 		jsonfile.write(f"{i}\n")
 
@@ -26,7 +26,12 @@ def createJavaProject(project_name, package_name, main_file_name):
 	 f"touch {project_name}/config.json"]
 	for i in commands_run:
 		os.system(i)
+	os.chdir(f"{project_name}")
+	commands_run = ["git init", "touch .gitignore"]
+	for i in commands_run:
+		os.system(i)
+	os.chdir("..")
 	os.chdir(f"{project_name}/src/{package_name}")
 	initilizeJAVA(f"{filename}.java", package_name)
 	os.chdir("../..")
-	editJSON(f"{filename}.java")
+	editJSON(f"{filename}.java", package_name)

@@ -1,11 +1,17 @@
 import os
 import sys
 import time
+import json
+try:
+	jsonfile = open("config.json")
+	jsonfile = json.load(jsonfile)
+except:
+	pass
 
 # Build the Java files
 def buildFiles():
-	os.chdir("src/")
-	os.chdir(os.listdir()[0])
+	os.chdir("src")
+	os.chdir(jsonfile["modulename"])
 	files = os.listdir()
 	compableFiles = []
 	for i in files:
@@ -19,7 +25,7 @@ def moveClassFiles():
 	os.chdir("../..")
 	classfiles = []
 	# Find the class files
-	filesdir = os.listdir("src")[0]
+	filesdir = jsonfile["modulename"]
 	possibleJavafiles = os.listdir(f"src/{filesdir}")
 	for i in possibleJavafiles:
 		buffer = i.split(".")
